@@ -29,6 +29,17 @@ git log --format='%h%x09%an%x09%s' v1.2.0..HEAD | node cli.js - --version v1.3.0
 node --test
 ```
 
+To draft notes for commits since the latest reachable tag, run this from the
+repository you want to release. Replace the path to `cli.js` and `vNEXT` with
+your copy of the script and the upcoming version. The repository needs at
+least one tag in the current branch's history.
+
+```bash
+latest_tag=$(git describe --tags --abbrev=0) &&
+  git log --format='%h%x09%an%x09%s' "$latest_tag"..HEAD |
+  node /path/to/release-notes-draft/cli.js - --version vNEXT
+```
+
 ## Acceptance criteria
 
 - Breaking changes (`!` or `BREAKING CHANGE`) appear first, even when their type is `feat` or `fix`.
