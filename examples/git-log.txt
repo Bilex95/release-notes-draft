@@ -1,0 +1,8 @@
+a1f9c02	Ada Okafor	feat(cart): apply percentage coupons at checkout (#41)
+b7e3d18	Tom Reyes	fix(payment): show a clear error when the card is declined (#44)
+c2d4e91	Ada Okafor	docs: explain coupon rules in the README
+d93a7f5	Priya Shah	feat(search)!: search now matches product SKUs instead of names (#39)
+e1b8c66	Tom Reyes	Merge pull request #44 from tom/declined-card
+f4c2a07	Priya Shah	perf(catalog): cache category pages for 60 seconds (#46)
+0a6e5d3	Lin Wei	fixed typo on about page
+1c7b9e8	Ada Okafor	chore(release): v1.2.0
